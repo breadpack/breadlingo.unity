@@ -22,6 +22,14 @@ namespace BreadTranslator.Unity.Editor.Tests
         }
 
         [Test]
+        public void EmptyApprovedExportHasValidChecksumAndLocaleWithoutCreatingApplyChanges()
+        {
+            const string empty = "<xliff xmlns=\"urn:oasis:names:tc:xliff:document:1.2\" version=\"1.2\"><file source-language=\"en\" target-language=\"ja\"><body/></file></xliff>";
+            var verified = UnityArtifactVerifier.VerifyExport(empty, UnityArtifactVerifier.Sha256Hex(empty), "en", "ja");
+            Assert.That(verified.UnitCount, Is.Zero);
+        }
+
+        [Test]
         public void ParseRejectsUnitsWithoutCollectionIdentity()
         {
             const string invalid = "<xliff xmlns=\"urn:oasis:names:tc:xliff:document:1.2\" version=\"1.2\"><file source-language=\"en\" target-language=\"ja\"><body><trans-unit id=\"1\" resname=\"key\"><source>A</source><target>B</target></trans-unit></body></file></xliff>";

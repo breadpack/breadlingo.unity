@@ -38,7 +38,8 @@ namespace BreadTranslator.Unity.Editor
 
             RequireLocale(parsed.SourceLocale, expectedSourceLocale, "source");
             RequireLocale(parsed.TargetLocale, expectedTargetLocale, "target");
-            ValidateIdentities(parsed);
+            // An authenticated export with no approved units is a valid empty result.
+            if (parsed.Units.Count > 0) ValidateIdentities(parsed);
             return new UnityArtifactVerificationResult(actualChecksum, parsed.SourceLocale, parsed.TargetLocale, parsed.Units.Count);
         }
 

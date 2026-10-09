@@ -250,6 +250,7 @@ namespace BreadTranslator.Unity.Editor
 
         private void SetPreview(string xliff, string locale, Dictionary<string, string> targets)
         {
+            if (XliffAdapter.Parse(xliff).Units.Count == 0) { previewXliff = null; lastApply = null; status = "No approved translations are available for " + locale + "."; return; }
             previewXliff = xliff; previewLocale = locale; previewTargets = targets;
             lastApply = XliffAdapter.Apply(xliff, locale, true, targets);
             status = lastApply.HasConflicts ? $"Preview blocked by {lastApply.Conflicts.Count} conflicts." : $"Review {lastApply.Applied} changes before applying.";
