@@ -1,0 +1,47 @@
+{
+  "name": "com.breadpack.breadlingo.unity",
+  "displayName": "BreadLingo Unity Localization",
+  "version": "0.1.0",
+  "unity": "6000.3",
+  "description": "Unity Localization String Table export and reviewed approved-translation import for BreadLingo.",
+  "keywords": [
+    "localization",
+    "breadlingo",
+    "unity",
+    "xliff"
+  ],
+  "category": "Localization",
+  "author": {
+    "name": "BreadPack",
+    "url": "https://github.com/breadpack"
+  },
+  "dependencies": {
+    "com.unity.localization": "1.4.5",
+    "com.unity.modules.imgui": "1.0.0",
+    "com.unity.modules.jsonserialize": "1.0.0",
+    "com.unity.modules.unitywebrequest": "1.0.0",
+    "com.unity.modules.screencapture": "1.0.0",
+    "com.unity.modules.imageconversion": "1.0.0"
+  },
+  "breadTranslatorCompatibility": {
+    "6000.3": {
+      "localization": "1.4.5"
+    }
+  },
+  "license": "MIT",
+  "documentationUrl": "https://github.com/breadpack/breadlingo.unity#readme",
+  "changelogUrl": "https://github.com/breadpack/breadlingo.unity/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/breadpack/breadlingo.unity/blob/main/LICENSE.md",
+  "files": [
+    "Editor/",
+    "Editor.meta",
+    "Runtime/",
+    "Runtime.meta",
+    "Tests/",
+    "Tests.meta",
+    "Documentation~/",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE.md"
+  ]
+}

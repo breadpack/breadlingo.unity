@@ -1,0 +1,20 @@
+{
+  "name": "BreadTranslator.Unity.Editor",
+  "rootNamespace": "BreadTranslator.Unity.Editor",
+  "references": [
+    "BreadTranslator.Unity.Runtime",
+    "Unity.Localization",
+    "Unity.Localization.Editor"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
